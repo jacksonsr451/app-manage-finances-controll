@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "app-manage-finances-controll",
+    "slug": "app-manage-finances-controll",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
