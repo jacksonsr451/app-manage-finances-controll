@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AreaInfo from "../components/areaInfo";
 import ButtonNewRegister from "../components/buttonNewRegister";
+import InputArea from "../components/inputArea";
 import TableArea from "../components/tableArea";
 import { StyledHome, StyledHeader, StylesContent, StyledTitle } from "../styles/styledHome";
 
@@ -20,6 +21,8 @@ type CategoriesProps = {
 
 
 const Home: React.FC = () => {
+
+    const [activad, setActivad] = useState<boolean>(false)
 
     const handleCurrentMonth = () => {
         let now = new Date()
@@ -76,7 +79,14 @@ const Home: React.FC = () => {
                     setExpense={setExpense}
                 />
             </StylesContent>
-            <ButtonNewRegister />
+            <ButtonNewRegister 
+                activad={activad} 
+                setActivad={setActivad}
+            />
+            <InputArea
+                activad={activad} 
+                setActivad={setActivad} 
+            />
         </StyledHome>
     )
 }

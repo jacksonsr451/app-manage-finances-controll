@@ -1,7 +1,13 @@
 import styled from "styled-components/native";
 
 
-export const StyledNewButtonRegister = styled.TouchableOpacity`
+type StyledNewButtonRegisterProps = {
+    actived: boolean
+} 
+
+
+export const StyledNewButtonRegister = styled.TouchableOpacity<StyledNewButtonRegisterProps>`
+    display: ${props => props.actived ? 'none' : 'flex'};
     width: 60px;  
     height: 60px;   
     border-radius: 30px;            
