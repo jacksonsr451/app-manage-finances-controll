@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components'
 import light from './src/styles/theme/light';
 
 const App: React.FC = () => {
+  
   return (
     <ThemeProvider theme={light}>
       <StatusBar style="auto" />
